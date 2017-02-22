@@ -19,7 +19,7 @@ main = do
   mproducer <- cameraProducer 1920 1080
   case mproducer of
     Nothing -> putStrLn "Failed to find a camera"
-    Just producer ->
+    Just ((_h,_w,_d),producer) ->
       do
         putStrLn "Found camera, printing first 20 frame data sums"
         runEffect $ producer >-> Pipes.Prelude.take 20 >-> consumer

@@ -39,8 +39,6 @@ library
   cc-options:          -fpic -shared -Wl,-E
   ld-options:          -Wl,-E
   build-depends:       base
-                     , accelerate
-                     , accelerate-io
                      , pipes
                      , vector 
                        
